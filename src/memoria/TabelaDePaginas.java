@@ -8,7 +8,7 @@ public class TabelaDePaginas {
     public static class EntradaTabela {
         public boolean naRAM;
         public int     frameAlocado;   // -1 se não estiver na RAM
-        public boolean bitReferencia;  // usado pelo Clock e Aging
+        public boolean bitReferencia;  // Foi acessada recentemente? usado pelo Clock e Aging
         public int     contador;       // usado pelo NFU
         public int     registroAging;  // registrador de envelhecimento (Aging)
         // ex: byte de 8 bits simulado como int
