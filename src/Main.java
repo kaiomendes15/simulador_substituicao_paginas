@@ -1,5 +1,6 @@
 import algoritmos.AlgoritmoSubstituicao;
 import algoritmos.Fifo;
+import algoritmos.Nfu;
 import algoritmos.ResultadoSimulacao;
 
 import java.util.Arrays;
@@ -13,12 +14,12 @@ public class Main {
 //        System.out.print("Informe a cadeia de páginas: ");
 //        String input = sc.nextLine();
 
-        EntradaSimulacao entrada = new EntradaSimulacao("1 2 3 4 5 6 7");
+        EntradaSimulacao entrada = new EntradaSimulacao("1 2 3 4 1 2 5 1 2 3 4 5");
         int[] cadeia = entrada.getCadeia();
 
 //        System.out.print("Informe a quantidade de frames: ");
 //        int quantFrames = sc.nextInt();
-        int quantFrames = 8;
+        int quantFrames = 3;
 
         System.out.println("\n=== Simulação de Substituição de Páginas ===");
         System.out.println("Cadeia : " + Arrays.toString(cadeia));
@@ -26,7 +27,7 @@ public class Main {
         System.out.println("--------------------------------------------");
 
         List<AlgoritmoSubstituicao> algoritmos = List.of(
-                new Fifo()
+                new Fifo(), new Nfu()
         );
 
         for (AlgoritmoSubstituicao alg : algoritmos) {
