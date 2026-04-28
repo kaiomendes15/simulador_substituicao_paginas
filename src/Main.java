@@ -1,7 +1,4 @@
-import algoritmos.AlgoritmoSubstituicao;
-import algoritmos.Fifo;
-import algoritmos.Nfu;
-import algoritmos.ResultadoSimulacao;
+import algoritmos.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +11,7 @@ public class Main {
 //        System.out.print("Informe a cadeia de páginas: ");
 //        String input = sc.nextLine();
 
-        EntradaSimulacao entrada = new EntradaSimulacao("1 2 3 4 1 2 5 1 2 3 4 5");
+        EntradaSimulacao entrada = new EntradaSimulacao("1 2 1 3 2 1 4 1 1 2 5 1 2 3 4 5");
         int[] cadeia = entrada.getCadeia();
 
 //        System.out.print("Informe a quantidade de frames: ");
@@ -27,7 +24,9 @@ public class Main {
         System.out.println("--------------------------------------------");
 
         List<AlgoritmoSubstituicao> algoritmos = List.of(
-                new Fifo(), new Nfu()
+                new Fifo(),
+                new Nfu(),
+                new Aging()
         );
 
         for (AlgoritmoSubstituicao alg : algoritmos) {
