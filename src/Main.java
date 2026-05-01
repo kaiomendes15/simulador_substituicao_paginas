@@ -26,7 +26,8 @@ public class Main {
         List<AlgoritmoSubstituicao> algoritmos = List.of(
                 new Fifo(),
                 new Nfu(),
-                new Aging()
+                new Aging(),
+                new Lru()
         );
 
         for (AlgoritmoSubstituicao alg : algoritmos) {
