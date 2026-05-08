@@ -28,13 +28,13 @@ O simulador foi escrito em Java. A estrutura foi dividida em classes com respons
 
 Os algoritmos funcionam assim:
 
-**FIFO** — mantém uma fila com a ordem de chegada das páginas. Na substituição, remove a que está há mais tempo na memória.
+**FIFO**: — mantém uma fila com a ordem de chegada das páginas. Na substituição, remove a que está há mais tempo na memória.
 
-**NFU** — cada página tem um contador que é incrementado a cada acesso. Na substituição, a página com menor contador é removida.
+**NFU**: — cada página tem um contador que é incrementado a cada acesso. Na substituição, a página com menor contador é removida.
 
-**Aging** — usa um registrador por página que é deslocado à direita a cada ciclo, com o bit de referência entrando pelo lado mais significativo. A página com menor registrador é a candidata à substituição.
+**Aging**: — usa um registrador por página que é deslocado à direita a cada ciclo, com o bit de referência entrando pelo lado mais significativo. A página com menor registrador é a candidata à substituição.
 
-**LRU** — mantém uma lista ordenada pelo último acesso. Na substituição, remove a página que está há mais tempo sem ser acessada.
+**LRU**: mantém uma lista ordenada pelo último acesso. Na substituição, remove a página que está há mais tempo sem ser acessada.
 
 A interface gráfica tem um campo para a cadeia de páginas, um spinner para o número de frames e um botão para rodar a simulação. O gráfico é desenhado com a API Graphics2D do Swing e tem uma animação de entrada nas barras.
 
@@ -63,6 +63,9 @@ Os testes foram feitos com a cadeia `1 2 1 3 2 1 4 1 1 2 5 1 2 3 4 5` (16 acesso
 | NFU       | 8               | 50%         |
 | Aging     | 8               | 50%         |
 | LRU       | 8               | 50%         |
+
+<img width="886" height="673" alt="image" src="https://github.com/user-attachments/assets/8f3c801d-597b-40dd-b8a9-0fd1727c3617" />
+
 
 O FIFO foi o pior, com 9 faltas. Isso acontece porque ele não leva em conta se uma página está sendo muito usada. Se ela foi carregada antes das outras, sai primeiro. Nessa cadeia, a página 1 é acessada várias vezes mas acaba sendo removida pelo FIFO por ter chegado mais cedo.
 
