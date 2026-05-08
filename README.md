@@ -92,3 +92,5 @@ SDPM SIMULATOR. **Page Replacement Algorithm Simulator**. Disponível em: <https
 UNIVESP. **Sistemas Operacionais – Paginação**. [S.l.]: YouTube, [2017]. Disponível em: <https://youtu.be/4EaBN98dk40>. Acesso em: maio 2026.
 
 UNIVESP. **Sistemas Operacionais – Algoritmos de Substituição de Páginas**. [S.l.]: YouTube, [2017]. Disponível em: <https://youtu.be/j6RMVMUxYmc>. Acesso em: maio 2026.
+
+MENDES, Kaio; MENESES, Leonardo. Simulador de Substituição de Páginas: README.md. [S. l.]: GitHub, 2024. Disponível em: https://github.com/kaiomendes15/simulador_substituicao_paginas. Acesso em: 8 maio 2026.
