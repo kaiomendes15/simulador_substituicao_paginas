@@ -64,7 +64,7 @@ Os testes foram feitos com a cadeia `1 2 1 3 2 1 4 1 1 2 5 1 2 3 4 5` (16 acesso
 | Aging     | 8               | 50%         |
 | LRU       | 8               | 50%         |
 
-<img width="886" height="673" alt="image" src="https://github.com/user-attachments/assets/8f3c801d-597b-40dd-b8a9-0fd1727c3617" />
+<img width="846" height="613" alt="Captura de tela 2026-05-08 191111" src="https://github.com/user-attachments/assets/a901f781-208e-48b1-924d-19c7789d0bd8" />
 
 
 O FIFO foi o pior, com 9 faltas. Isso acontece porque ele não leva em conta se uma página está sendo muito usada. Se ela foi carregada antes das outras, sai primeiro. Nessa cadeia, a página 1 é acessada várias vezes mas acaba sendo removida pelo FIFO por ter chegado mais cedo.
